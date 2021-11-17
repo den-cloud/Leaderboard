@@ -1,42 +1,55 @@
-.flex-container {
+h1 {
+  font-size: 70px;
+  padding-left: 30px;
+}
+
+.container {
   display: flex;
+  padding-left: 60px;
+  gap: 30px;
 }
 
-.flex-container > div {
-  background-color: #f1f1f1;
-  width: 100%;
-  margin: 10px;
-  text-align: center;
-}
-
-.score-header {
-  display: flex;
-  text-align: center;
-  margin: 10px;
-  justify-content: space-around;
-}
-
-.score-list {
-  border: 1px solid #000;
-  padding: 5px;
-}
-
-.submit-button {
-  float: right;
-}
-
-li {
-  color: black;
-}
-
-li:nth-child(odd) {
-  background-color: rgb(180, 180, 180);
-}
-
-li:nth-child(even) {
-  background-color: #fff;
+span {
+  font-size: 30px;
+  font-weight: bold;
 }
 
 ul {
-  list-style: none;
+  list-style-type: none;
+  padding-left: 0;
+  border: 1px solid black;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+li {
+  padding: 10px;
+}
+
+li:nth-child(even) {
+  background-color: rgb(194, 194, 194);
+}
+
+.add-score {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 20px;
+}
+
+.add-score input {
+  height: 25px;
+  padding: 5px;
+}
+
+.display-scores {
+  width: 40%;
+}
+
+.submit-btn {
+  align-self: flex-end;
+}
+
+button {
+  font-size: 20px;
 }
