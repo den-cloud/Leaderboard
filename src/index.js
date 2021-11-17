@@ -1,17 +1,11 @@
-import _ from 'lodash';
+// import html from './index.html';
 import './style.css';
 
-
-function component() {
-  const element = document.createElement('div');
-
-  // Lodash, now imported by this script
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-
-  element.appendChild(myIcon);
-
-  return element;
-}
-
-document.body.appendChild(component());
+window.addEventListener('load', () => {
+  const ol = document.querySelector('#score');
+  new Array(6).fill(1).forEach((_, index) => {
+    const li = document.createElement('li');
+    li.innerText = `Name: ${index}`;
+    ol.appendChild(li);
+  });
+});
