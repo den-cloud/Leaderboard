@@ -1,11 +1,12 @@
-// import html from './index.html';
-import './style.css';
+import 'bootstrap';
+import { refreshBtnListener, sumbitFormListener, displayList } from './listeners';
+import { getScores } from './api';
+import './app.scss';
 
-window.addEventListener('load', () => {
-  const ol = document.querySelector('#score');
-  new Array(6).fill(1).forEach((_, index) => {
-    const li = document.createElement('li');
-    li.innerText = `Name: ${index}`;
-    ol.appendChild(li);
-  });
-});
+(async () => {
+  const { result } = await getScores();
+  displayList(result);
+})();
+
+document.querySelector('#refresh-btn').addEventListener('click', refreshBtnListener);
+document.querySelector('#add-a-score').addEventListener('submit', sumbitFormListener);
