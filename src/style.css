@@ -1,0 +1,55 @@
+h1 {
+  font-size: 70px;
+  padding-left: 30px;
+}
+
+.container {
+  display: flex;
+  padding-left: 60px;
+  gap: 30px;
+}
+
+span {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  border: 1px solid black;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+li {
+  padding: 10px;
+}
+
+li:nth-child(even) {
+  background-color: rgb(194, 194, 194);
+}
+
+.add-score {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 20px;
+}
+
+.add-score input {
+  height: 25px;
+  padding: 5px;
+}
+
+.display-scores {
+  width: 40%;
+}
+
+.submit-btn {
+  align-self: flex-end;
+}
+
+button {
+  font-size: 20px;
+}
