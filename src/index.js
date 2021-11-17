@@ -19,15 +19,33 @@ const creatGame = async () => {
 
 creatGame();
 
+const resetErrorMsgs = () => {
+  document.querySelector('.name-warning').classList.add('display-none');
+  document.querySelector('.score-warning').classList.add('display-none');
+  document.querySelector('.minus-score-warning').classList.add('display-none');
+};
+
 document.querySelector('.refresh-btn').addEventListener('click', () => {
   renderScores();
 });
 
 document.querySelector('.submit-btn').addEventListener('click', async () => {
+  resetErrorMsgs();
+
   const userData = document.querySelector('#name');
   const scoreData = document.querySelector('#score');
 
-  if (userData === '' || scoreData === '') {
+  if (userData.value === '' || scoreData.value === '' || scoreData.value < 0) {
+    if (userData.value === '') {
+      document.querySelector('.name-warning').classList.remove('display-none');
+    }
+    if (scoreData.value === '') {
+      document.querySelector('.score-warning').classList.remove('display-none');
+    }
+
+    if (scoreData.value < 0) {
+      document.querySelector('.minus-score-warning').classList.remove('display-none');
+    }
     return;
   }
 
@@ -35,4 +53,6 @@ document.querySelector('.submit-btn').addEventListener('click', async () => {
 
   userData.value = '';
   scoreData.value = '';
+
+  resetErrorMsgs();
 });

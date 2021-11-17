@@ -1,10 +1,14 @@
-The leaderboard website displays scores submitted by different players.
-
-Screenshot (222)
+# Leaderboard
 
 The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
 
-Built With
+## Project Design
+
+![screenshot](Screenshot.png)
+
+
+## Built With
+
 HTML
 
 CSS
@@ -13,11 +17,7 @@ JavaScript
 
 Bootstrap
 
-Live Demo
-
-[Live Demo Link]
-
-Getting Started
+ ## Getting Started
 
 To get a local copy up and running follow these simple example steps.
 

@@ -20,9 +20,16 @@
     </div>
     <div class="add-score">
       <span>Add your score</span>
-      <input id="name" type="text" placeholder="your name">
-      <input id="score" type="number" placeholder="your score">
-      <button type="submit" class="submit-btn">submit</button>
+      <div class="name-area">
+        <input id="name" type="text" placeholder="your name">
+        <span class="name-warning display-none">* please enter the name</span>
+      </div>
+      <div class="score-area">
+        <input id="score" type="number" placeholder="your score">
+        <span class="score-warning display-none">* please enter the score</span>
+        <span class="minus-score-warning display-none">* the score must be more than or equal zero</span>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
     </div>
   </div>
 </body>
